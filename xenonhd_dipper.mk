@@ -7,10 +7,10 @@
 $(call inherit-product, device/xiaomi/dipper/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/xenonhd/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_dipper
+PRODUCT_NAME := xenonhd_dipper
 PRODUCT_DEVICE := dipper
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 8
@@ -24,3 +24,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_DEVICE="dipper"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.xenonhd.maintainer=joe2k01
